@@ -12,6 +12,7 @@
 - Virtual Box
 - Python 3
 - Keycloak
+- Postgresql
 
 ## Playbook
 
