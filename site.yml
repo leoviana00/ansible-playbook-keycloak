@@ -1,0 +1,25 @@
+---
+- name: Configurar máquinas
+  hosts: all
+  user: root
+  tags: 
+    - setup
+  roles:
+    - configure-host
+
+- name: Configurar Keycloak
+  hosts: keycloak-01
+  remote_user: root
+  tags: keycloak
+  roles:
+    - role: keycloak
+
+- name: Instalar o Postgres
+  hosts: postgres
+  remote_user: vagrant
+  become: True
+  tags: pgsql
+  roles:
+    - role: db-keycloak
+
+
