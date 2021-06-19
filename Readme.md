@@ -16,16 +16,16 @@
 
 ## Playbook
 
-- Subindo o banco `Postgresql`
-
-```bash
-ansible-playbook -i inventories/virtualbox.yml site.yml --tags pgsql
-```
-
 - Configurando o Host
 
 ```bash
 ansible-playbook -i inventories/virtualbox.yml site.yml --tags setup
+```
+
+- Subindo o banco `Postgresql`
+
+```bash
+ansible-playbook -i inventories/virtualbox.yml site.yml --tags pgsql
 ```
 
 - Subindo o Keycloak
