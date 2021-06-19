@@ -9,7 +9,7 @@
 
 - name: Configurar Keycloak
   hosts: keycloak-01
-  remote_user: root
+  remote_user: vagrant
   tags: keycloak
   roles:
     - role: keycloak
